@@ -1,0 +1,243 @@
+/* src/components/Analytics.css */
+.analytics-dashboard {
+    padding: 20px;
+  }
+  
+  .analytics-dashboard h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  
+  .kpi {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .kpi:hover {
+    transform: translateY(-5px);
+  }
+  
+  .kpi h3 {
+    color: #007bff;
+  }
+  
+  .kpi-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .kpi-description {
+    font-size: 14px;
+    color: #666;
+  }
+/* src/components/Analytics.css */
+.analytics-dashboard {
+  padding: 20px;
+}
+
+.analytics-dashboard h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.kpi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.kpi {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kpi:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.kpi h3 {
+  color: #007bff;
+}
+
+.kpi-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.kpi-details {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+  text-align: left;
+}
+/* src/components/Analytics.css */
+.analytics-dashboard {
+  padding: 20px;
+}
+
+.kpi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.kpi {
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi:hover {
+  transform: translateY(-5px);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background for better focus on modal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px; /* Allows for some padding around modal for smaller screens */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 40px; /* More padding for better readability */
+  border-radius: 10px;
+  width: 100%; /* Utilizes full width for smaller screens */
+  max-width: 800px; /* Maximum width to ensure readability on larger screens */
+  position: relative; /* For absolute positioning of close button */
+  overflow-y: auto; /* Allows scrolling for overflowing content */
+  max-height: 90vh; /* Ensures modal content is not taller than the viewport height */
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px; /* Larger close button for easier interaction */
+  cursor: pointer;
+}
+
+/* Additional styles for content inside modal for better presentation */
+.modal-header {
+  margin-bottom: 20px;
+}
+
+.modal-body {
+  font-size: 16px; /* Adjusts body font size for readability */
+}
+
+.modal-footer {
+  margin-top: 20px;
+  text-align: right;
+}
+/* src/components/Analytics.css */
+.analytics-dashboard {
+  padding: 20px;
+}
+
+.kpi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.kpi {
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kpi:hover {
+  transform: translateY(-5px);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Darker background for better focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px; /* Ensures padding around the modal content */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 40px; /* More padding for a spacious layout */
+  border-radius: 10px; /* Slightly larger border radius for a softer look */
+  width: 90%; /* Utilize more screen width */
+  max-width: 800px; /* Larger max-width for more content */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2); /* Stronger shadow for depth */
+  overflow-y: auto; /* Allows scrolling within the modal if content overflows */
+}
+
+.close-button {
+  float: right;
+  font-size: 32px; /* Larger close button */
+  font-weight: bold;
+  cursor: pointer;
+  margin: -20px -20px 20px 20px; /* Position adjustment */
+}
+
+/* Additional styling for modal details */
+.modal-content h2 {
+  margin-top: 0;
+}
+
+/* Scrollbar customization for modal content */
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

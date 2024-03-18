@@ -1,0 +1,66 @@
+
+  
+  .insurance-codes .codes-list .code-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-left: 4px solid #17a2b8;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .insurance-codes .codes-list .code-item .code {
+    font-weight: bold;
+    color: #495057;
+  }
+  
+  .insurance-codes .codes-list .code-item .description {
+    color: #6c757d;
+  }
+  /* src/components/InsuranceCodes.css */
+.insurance-codes {
+  padding: 20px;
+}
+
+.insurance-codes input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.codes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.code-item {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-item .code {
+  font-weight: bold;
+}
+
+.code-item .description {
+  margin-left: 10px;
+}
+
+.code-item .company {
+  margin-left: auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+  
