@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+/* Enhanced Navigation Styling */
+nav {
+  background-color: #0056b3; /* A deeper blue for a more professional feel */
+  padding: 1rem 2rem; /* Adjust padding for better spacing */
+  display: flex;
+  justify-content: center; /* Center items for medium to large screens */
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 10px;
+  border-radius: 5px; /* Rounded corners for a modern look */
+  transition: all 0.3s ease;
+  font-weight: 500; /* Slightly bolder font for better readability */
+}
+
+nav a:hover, nav a:focus {
+  color: #0056b3;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+/* Responsive Design: Adjustments for smaller screens */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-around; /* Ensure links are evenly spaced */
+  }
+
+  nav a {
+    margin: 5px 0; /* More vertical spacing for touch targets */
+    padding: 10px; /* Larger touch targets for mobile users */
+  }
+}
+
+/* Optional: Active Link Styling */
+nav a.active {
+  background-color: #ffffff;
+  color: #0056b3;
+  font-weight: 600;
+}

@@ -1,35 +1,18 @@
-/* Navigation.css */
-.main-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 0 20px;
-  }
-  
-  .main-nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 15px 20px;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .main-nav a:hover,
-  .main-nav a.active-link {
-    color: #007bff;
-    border-bottom: 3px solid #007bff; 
-  }
-  
-  @media (max-width: 768px) {
-    .main-nav {
-      flex-direction: column;
-    }
-  
-    .main-nav a {
-      width: 100%;
-      text-align: center;
-    }
-  }
-  
+nav {
+  background-color: #343a40; /* Dark gray background */
+  padding: 1rem 0; /* Top and bottom padding */
+  text-align: center; /* Center the navigation links */
+}
+
+nav a {
+  color: #ffffff; /* White text for the links */
+  text-decoration: none; /* Remove underline from links */
+  margin: 0 15px; /* Spacing between links */
+  font-size: 16px; /* Size of the link text */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+  color: #007bff; /* Light blue color on hover */
+  text-decoration: none; /* Ensure underline doesn't reappear on hover */
+}
