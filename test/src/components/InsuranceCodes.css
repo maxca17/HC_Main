@@ -1,66 +1,98 @@
-
-  
-  .insurance-codes .codes-list .code-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #e9ecef;
-    border-left: 4px solid #17a2b8;
-    margin-bottom: 10px;
-    border-radius: 4px;
-  }
-  
-  .insurance-codes .codes-list .code-item .code {
-    font-weight: bold;
-    color: #495057;
-  }
-  
-  .insurance-codes .codes-list .code-item .description {
-    color: #6c757d;
-  }
-  /* src/components/InsuranceCodes.css */
-.insurance-codes {
+.insurance-codes-container {
   padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.insurance-codes input[type="text"] {
+.insurance-codes-container h2 {
+  color: #333;
+}
+
+.insurance-codes-container input {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 15px 0;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-.codes-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.code-item {
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.codes-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
 
-.code-item .code {
-  font-weight: bold;
-}
-
-.code-item .description {
-  margin-left: 10px;
-}
-
-.code-item .company {
-  margin-left: auto;
-  padding: 5px 10px;
+.mapping-item {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: white;
   border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-  
+.cpt-code, .icd-code, .description {
+  margin: 5px 0;
+}
+.insurance-codes-container {
+  padding: 20px;
+  max-width: 960px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.insurance-codes-container h2 {
+  color: #0056b3;
+  margin-bottom: 1rem;
+}
+
+.insurance-codes-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.codes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.mapping-item {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.mapping-item > div {
+  margin-bottom: 10px;
+}
+
+.cpt-code, .icd-code, .description {
+  text-align: left;
+}
+
+.cpt-code strong, .icd-code strong, .description strong {
+  color: #0056b3;
+}
+
+/* Enhancements for responsiveness */
+@media screen and (max-width: 768px) {
+  .codes-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Additional styles for visual enhancement */
