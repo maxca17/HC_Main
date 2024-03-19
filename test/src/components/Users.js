@@ -1,6 +1,6 @@
 // src/components/Users.js
 import React, { useState } from 'react';
-import './Users.css';
+//import './Users.css';
 
 const mockUserData = [
   { id: 1, name: 'John Doe', role: 'Administrator', status: 'Active' },

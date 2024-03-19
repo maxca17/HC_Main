@@ -107,3 +107,52 @@
   color: #666;
   margin-top: 10px;
 }
+.financials-container {
+  padding: 2rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.financial-item {
+  background: #ffffff;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.financial-item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.financial-item h3 {
+  color: #333;
+  margin: 0;
+}
+
+.financial-item p {
+  color: #666;
+}
+
+.financial-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fafafa;
+  border-top: 1px solid #eaeaea;
+}
+/* Add to the existing styles */
+/* This will center your charts */
+.financials-container {
+  text-align: center;
+}
+
+/* Styling for the PieChart labels */
+.recharts-pie-label-text {
+  fill: #fff;
+  font-size: 0.8em;
+}
