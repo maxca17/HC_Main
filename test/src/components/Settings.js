@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-//import './Dashboard.css';
+import { Form, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Settings() {
   const [emailNotifications, setEmailNotifications] = useState(true);
@@ -13,29 +14,27 @@ function Settings() {
   };
 
   return (
-    <div className="dashboard-component">
+    <div className="container mt-5">
       <h2>Settings</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="setting">
-          <label htmlFor="emailNotifications">Email Notifications:</label>
-          <input
-            type="checkbox"
-            id="emailNotifications"
-            checked={emailNotifications}
-            onChange={(e) => setEmailNotifications(e.target.checked)}
-          />
-        </div>
-        <div className="setting">
-          <label htmlFor="autoUpdate">Automatic Updates:</label>
-          <input
-            type="checkbox"
-            id="autoUpdate"
-            checked={autoUpdate}
-            onChange={(e) => setAutoUpdate(e.target.checked)}
-          />
-        </div>
-        <button type="submit">Save Settings</button>
-      </form>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="emailNotifications">
+          <Form.Check 
+            type="checkbox" 
+            label="Email Notifications" 
+            checked={emailNotifications} 
+            onChange={(e) => setEmailNotifications(e.target.checked)} />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="autoUpdate">
+          <Form.Check 
+            type="checkbox" 
+            label="Automatic Updates" 
+            checked={autoUpdate} 
+            onChange={(e) => setAutoUpdate(e.target.checked)} />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">Save Settings</Button>
+      </Form>
     </div>
   );
 }

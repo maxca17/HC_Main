@@ -1,6 +1,7 @@
-// src/components/Users.js
+
 import React, { useState } from 'react';
-//import './Users.css';
+import { Modal, Button, Table } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const mockUserData = [
   { id: 1, name: 'John Doe', role: 'Administrator', status: 'Active' },
@@ -11,32 +12,56 @@ const mockUserData = [
 
 function Users() {
   const [selectedUser, setSelectedUser] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const viewUserDetails = (user) => {
     setSelectedUser(user);
+    setShowModal(true);
   };
 
+  const handleClose = () => setShowModal(false);
+
   return (
-    <div className="users-dashboard">
+    <div className="container mt-5">
       <h2>Users</h2>
-      <div className="user-list">
-        {mockUserData.map(user => (
-          <div key={user.id} className="user-item" onClick={() => viewUserDetails(user)}>
-            <h3>{user.name}</h3>
-            <p>{user.role} - {user.status}</p>
-          </div>
-        ))}
-      </div>
-      {selectedUser && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close-button" onClick={() => setSelectedUser(null)}>&times;</span>
-            <h2>{selectedUser.name}</h2>
-            <p>Role: {selectedUser.role}</p>
-            <p>Status: {selectedUser.status}</p>
-          </div>
-        </div>
-      )}
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {mockUserData.map(user => (
+            <tr key={user.id} onClick={() => viewUserDetails(user)}>
+              <td>{user.name}</td>
+              <td>{user.role}</td>
+              <td>{user.status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+
+      <Modal show={showModal} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>User Details</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {selectedUser && (
+            <>
+              <p><strong>Name:</strong> {selectedUser.name}</p>
+              <p><strong>Role:</strong> {selectedUser.role}</p>
+              <p><strong>Status:</strong> {selectedUser.status}</p>
+            </>
+          )}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }

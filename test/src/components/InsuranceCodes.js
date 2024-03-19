@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './InsuranceCodes.css';
+import { Form, Table, Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Example data structure
 const cptToIcdCodes = [
@@ -19,25 +20,38 @@ function InsuranceCodes() {
   );
 
   return (
-    <div className="insurance-codes-container">
-      <h2>CPT to ICD Cheat Sheet</h2>
-      <input
-        type="text"
-        placeholder="Search by description or CPT code..."
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <div className="codes-list">
-        {filteredMappings.map((mapping, index) => (
-          <div key={index} className="mapping-item">
-            <div className="cpt-code"><strong>CPT:</strong> {mapping.cpt}</div>
-            <div className="icd-code"><strong>ICD:</strong> {mapping.icd.join(', ')}</div>
-            <div className="description"><strong>Description:</strong> {mapping.description}</div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <Container className="mt-5">
+      <Row>
+        <Col>
+          <h2>CPT to ICD Cheat Sheet</h2>
+          <Form.Control
+            type="text"
+            placeholder="Search by description or CPT code..."
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="mb-3"
+          />
+          <Table striped bordered hover size="sm">
+            <thead>
+              <tr>
+                <th>CPT Code</th>
+                <th>ICD Codes</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredMappings.map((mapping, index) => (
+                <tr key={index}>
+                  <td>{mapping.cpt}</td>
+                  <td>{mapping.icd.join(', ')}</td>
+                  <td>{mapping.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
 export default InsuranceCodes;
-

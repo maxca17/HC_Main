@@ -1,6 +1,7 @@
-// src/components/Analytics.js
+
+
 import React, { useState } from 'react';
-import './Analytics.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const kpiData = [
   {
@@ -44,14 +45,18 @@ function Analytics() {
   };
 
   return (
-    <div className="analytics-dashboard">
-      <h2>Analytics Dashboard</h2>
-      <div className="kpi-container">
+    <div className="container mt-5">
+      <h2 className="mb-4">Analytics Dashboard</h2>
+      <div className="row">
         {kpiData.map((kpi) => (
-          <div key={kpi.id} className="kpi" onClick={() => toggleExpand(kpi.id)}>
-            <h3>{kpi.name}</h3>
-            <p className="kpi-value">{kpi.value}</p>
-            {expandedId === kpi.id && <p className="kpi-details">{kpi.details}</p>}
+          <div key={kpi.id} className="col-md-4 mb-3">
+            <div className="card h-100" onClick={() => toggleExpand(kpi.id)}>
+              <div className="card-body">
+                <h5 className="card-title">{kpi.name}</h5>
+                <h6 className="card-subtitle mb-2 text-muted">{kpi.value}</h6>
+                {expandedId === kpi.id && <p className="card-text">{kpi.details}</p>}
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -60,3 +65,4 @@ function Analytics() {
 }
 
 export default Analytics;
+

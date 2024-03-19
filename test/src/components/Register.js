@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-//import './Register.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Register() {
   const [userDetails, setUserDetails] = useState({
@@ -23,22 +23,43 @@ function Register() {
   };
 
   return (
-    <div className="register-container">
+    <div className="container mt-5">
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">Username:</label>
-          <input type="text" id="username" name="username" value={userDetails.username} onChange={handleChange} />
+        <div className="mb-3">
+          <label htmlFor="username" className="form-label">Username:</label>
+          <input 
+            type="text" 
+            className="form-control" 
+            id="username" 
+            name="username" 
+            value={userDetails.username} 
+            onChange={handleChange} 
+          />
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" value={userDetails.email} onChange={handleChange} />
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Email:</label>
+          <input 
+            type="email" 
+            className="form-control" 
+            id="email" 
+            name="email" 
+            value={userDetails.email} 
+            onChange={handleChange} 
+          />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input type="password" id="password" name="password" value={userDetails.password} onChange={handleChange} />
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">Password:</label>
+          <input 
+            type="password" 
+            className="form-control" 
+            id="password" 
+            name="password" 
+            value={userDetails.password} 
+            onChange={handleChange} 
+          />
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" className="btn btn-primary">Register</button>
       </form>
     </div>
   );

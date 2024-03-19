@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import './Financials.css';
+//import './Financials.css';
 
 const financialData = [
   // ... existing data

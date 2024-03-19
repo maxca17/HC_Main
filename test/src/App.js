@@ -22,7 +22,7 @@ function App() {
       <div className="App">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
-            <NavLink className="navbar-brand" to="/">Pegasus 5</NavLink>
+            <NavLink className="navbar-brand" to="/">Pegasus </NavLink>
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
